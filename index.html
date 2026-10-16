@@ -1,1 +1,197 @@
-Coucou
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Club Info — Eurobot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="La participation du lycée Gassin à la compétition Eurobot — équipe, résultats et projets." />
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220ff;
+      --muted:#9aa4b2;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.03);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,var(--bg) 0%, #071020 100%);color:#e6eef6}
+    .container{max-width:1100px;margin:3rem auto;padding:1rem}
+
+    /* Header / Hero */
+    header.hero{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:center}
+    @media(max-width:880px){header.hero{grid-template-columns:1fr;padding-bottom:1rem}header.hero .cards{order:2}}
+    .hero .title{font-size:clamp(1.4rem,3.5vw,2.4rem);line-height:1.03;font-weight:800;margin:0}
+    .hero p.lead{color:var(--muted);margin-top:.6rem;font-size:1rem}
+
+    .kpi-cards{display:grid;gap:1rem}
+    .card{background:linear-gradient(180deg,var(--card),var(--glass));padding:1rem;border-radius:12px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .kpi{display:flex;justify-content:space-between;align-items:center}
+    .kpi .value{font-weight:700;font-size:1.4rem}
+    .kpi .label{color:var(--muted);font-size:.9rem}
+
+    /* Timeline */
+    .timeline{margin-top:2rem;display:grid;gap:1rem}
+    .timeline-item{display:flex;gap:1rem;align-items:flex-start}
+    .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:6px;flex:0 0 12px}
+    .timeline-item .body{background:var(--glass-2);padding:1rem;border-radius:10px;flex:1}
+    .year{font-weight:700;color:#fff}
+    .muted{color:var(--muted)}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:1rem}
+    .photo{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));height:120px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem}
+
+    footer{margin-top:3rem;color:var(--muted);font-size:.9rem;text-align:center}
+
+    /* Buttons */
+    .btn{display:inline-flex;gap:.6rem;align-items:center;padding:.5rem .9rem;background:linear-gradient(90deg,var(--accent),#7c3aed);color:#021026;border-radius:10px;font-weight:700;border:none;cursor:pointer;text-decoration:none}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div>
+        <h1 class="title">Le club informatique du lycée — participation à Eurobot</h1>
+        <p class="lead">Depuis plusieurs années le lycée participe à Eurobot, une compétition internationale de robotique pour lycéens et étudiants. Retrouvez ici notre équipe, nos résultats et le projet présenté.</p>
+
+        <div style="margin-top:1.2rem;display:flex;gap:.6rem;flex-wrap:wrap">
+          <a class="btn" href="#participation">Voir la participation</a>
+          <a class="btn ghost" href="#contact">Nous contacter</a>
+        </div>
+
+        <section class="timeline" id="participation" aria-labelledby="participation-h">
+          <h2 id="participation-h" style="margin:0;font-size:1.05rem;margin-top:1.6rem">Historique Eurobot</h2>
+
+          <article class="timeline-item">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="body card">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div class="year">2025 — Qualification nationale</div>
+                  <div class="muted" style="margin-top:.4rem">Notre équipe a présenté un robot autonome axé sur la manipulation d'objets légers.</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="muted">Résultat</div>
+                  <div style="font-weight:800">Top 10 national</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="body card">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div class="year">2024 — Prototype</div>
+                  <div class="muted" style="margin-top:.4rem">Participation locale et développement d'un châssis modulaire. Travail porté par les élèves de terminale et première.</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="muted">Point clé</div>
+                  <div style="font-weight:800">Châssis modulaire</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="dot" aria-hidden="true"></div>
+            <div class="body card">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <div class="year">2023 — Début du club</div>
+                  <div class="muted" style="margin-top:.4rem">Création du club et premières séances de robotique et programmation (C/C++, Python, ROS léger).</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="muted">Membres</div>
+                  <div style="font-weight:800">12 élèves</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </section>
+
+      </div>
+
+      <aside class="cards">
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="color:var(--muted);font-size:.85rem">Années de participation</div>
+              <div style="font-size:1.6rem;font-weight:800;margin-top:.25rem">3</div>
+            </div>
+            <div style="text-align:right">
+              <div style="color:var(--muted);font-size:.85rem">Membres actifs</div>
+              <div style="font-size:1.6rem;font-weight:800;margin-top:.25rem">14</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="color:var(--muted);font-size:.85rem">Encadrants</div>
+              <div style="font-size:1rem;font-weight:700;margin-top:.25rem">2 profs + 1 intervenant</div>
+            </div>
+            <div style="text-align:right">
+              <div style="color:var(--muted);font-size:.85rem">Budget projet</div>
+              <div style="font-weight:800">€1,200</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:1rem">
+          <h3 style="margin:0 0 .6rem 0">Galerie</h3>
+          <div class="gallery">
+            <div class="photo">Photo 1</div>
+            <div class="photo">Photo 2</div>
+            <div class="photo">Photo 3</div>
+            <div class="photo">Photo 4</div>
+          </div>
+        </div>
+      </aside>
+
+    </header>
+
+    <section style="margin-top:2rem" aria-labelledby="project-h">
+      <h2 id="project-h" style="margin:0;font-size:1.1rem">Le projet présenté</h2>
+      <div class="card" style="margin-top:0.8rem">
+        <p class="muted" style="margin:0">Description courte : Robot autonome capable d'identifier, saisir et déplacer des cibles selon le thème de l'année. Architecture logicielle : contrôleur C++, capteurs vision et distance, logique de décision embarquée.</p>
+
+        <ul style="margin-top:1rem;color:var(--muted);line-height:1.6">
+          <li><strong>Langages :</strong> C/C++, Python</li>
+          <li><strong>Électronique :</strong> Microcontrôleur STM32, driver moteurs, capteurs lidar/ultrason</li>
+          <li><strong>Outils :</strong> Git, simulation légère, tests unitaires</li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section style="margin-top:2rem" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h" style="margin:0;font-size:1.05rem">Nous soutenir / Contact</h2>
+      <div class="card" style="margin-top:.8rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:220px">
+          <p class="muted" style="margin:0 0 .6rem 0">Vous souhaitez sponsoriser le projet, prêter du matériel ou rejoindre le club ? Contactez-nous.</p>
+          <a class="btn" href="mailto:contact@lycee-gassin.fr">Envoyer un mail</a>
+        </div>
+        <div style="min-width:180px;color:var(--muted);text-align:right">
+          <div style="font-weight:700">Club Info — Lycée Gassin</div>
+          <div style="margin-top:.3rem">Professeur référent : Mme Durand</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © Lycée Gassin — Club Info • Eurobot
+    </footer>
+  </div>
+</body>
+</html>
